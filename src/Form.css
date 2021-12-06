@@ -1,0 +1,27 @@
+.searchForm {
+  font-family: "Work Sans", sans-serif;
+}
+
+#search-city {
+  width: 200px;
+  background-color: #caecec;
+  border-color: #749b9b;
+  margin-left: 300px;
+}
+
+#search-city:hover {
+  opacity: 70%;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+
+#buttonGo {
+  margin-left: 250px;
+}
+
+#buttonGo:hover {
+  background-color: #749b9b;
+  opacity: 70%;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
