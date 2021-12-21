@@ -8,9 +8,9 @@ export default function Form() {
         <div className="row">
           <div className="col-4">
             <input
+              className="form-control"
               type="search"
               placeholder="Search for your city"
-              className="form-control"
               id="search-city"
             />
           </div>

@@ -25,7 +25,11 @@ export default function App(props) {
         </div>
 
         <div className="sourceCode">
-          <a href="https://github.com/NelB82/Weather-AppI" className="codeLink">
+          <a
+            href="https://github.com/NelB82/react-weather-app"
+            className="codeLink"
+            target="_blank"
+          >
             open source code
           </a>
           by Nele Braun
