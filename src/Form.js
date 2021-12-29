@@ -6,15 +6,15 @@ export default function Form() {
     <div className="form">
       <form id="searchForm" className="mb-3">
         <div className="row">
-          <div className="col-4">
+          <div className="col">
             <input
-              className="form-control"
-              type="search"
+              type="text"
               placeholder="Search for your city"
-              id="search-city"
+              className="form-control"
+              id="searchCity"
             />
           </div>
-          <div className="col-4">
+          <div className="col">
             <button
               type="submit"
               value="search"
