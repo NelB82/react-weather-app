@@ -4,11 +4,16 @@ import axios from "axios";
 
 export default function TodayList() {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(response.data.main.temp);
+    setWeatherData({
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      condition: response.data.weather[0].description,
+    });
     setReady(true);
   }
 
@@ -30,7 +35,9 @@ export default function TodayList() {
               <div className="vertical"></div>
               <ul>
                 <li>
-                  <span id="today-temperature">{Math.round(temperature)}</span>
+                  <span id="today-temperature">
+                    {Math.round(weatherData.temperature)}
+                  </span>
                   <button href="#" id="celsius">
                     °C
                   </button>
@@ -40,15 +47,15 @@ export default function TodayList() {
                   </button>
                 </li>
                 <li>
-                  <span id="todayHumidity">20</span>
+                  <span id="todayHumidity">{weatherData.humidity}</span>
                   <span>%</span>
                 </li>
                 <li>
-                  <span id="todayWind">5</span>
+                  <span id="todayWind">{Math.round(weatherData.wind)}</span>
                   <span>km/h</span>
                 </li>
                 <li>
-                  <span id="todayCondition"></span>
+                  <span id="todayCondition">{weatherData.condition}</span>
                 </li>
               </ul>
             </div>
