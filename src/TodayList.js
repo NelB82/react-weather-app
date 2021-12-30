@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TodayList.css";
 import axios from "axios";
 
-export default function TodayList() {
+export default function TodayList(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
 
@@ -56,7 +56,9 @@ export default function TodayList() {
                   <span>km/h</span>
                 </li>
                 <li>
-                  <span id="todayCondition">{weatherData.condition}</span>
+                  <span className="text-capitalize" id="todayCondition">
+                    {weatherData.condition}
+                  </span>
                 </li>
               </ul>
             </div>
@@ -66,8 +68,7 @@ export default function TodayList() {
     );
   } else {
     const apiKey = "469afd3987955a7eaf265f8d616d9447";
-    let city = "Bremen";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }

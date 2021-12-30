@@ -17,8 +17,8 @@ export default function App(props) {
           <div container className="app">
             <Form />
             <span></span>
-            <Today />
-            <TodayList />
+            <Today defaultCity="Bremen" />
+            <TodayList defaultCity="Bremen" />
             <hr className="listStart"></hr>
 
             <div className="weatherForecast" id="forecast"></div>
