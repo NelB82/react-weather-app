@@ -13,6 +13,7 @@ export default function TodayList() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       condition: response.data.weather[0].description,
+      name: response.data.main.name,
     });
     setReady(true);
   }
