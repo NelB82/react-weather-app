@@ -6,6 +6,7 @@ import "./App.css";
 import Form from "./Form";
 import Today from "./Today";
 import TodayList from "./TodayList";
+import WeatherInfo from "./WeatherInfo";
 
 document.body.style.backgroundColor = "#a6bdbd";
 
@@ -16,12 +17,7 @@ export default function App(props) {
         <div className="appWrapper">
           <div container className="app">
             <Form />
-            <span></span>
-            <Today defaultCity="Bremen" />
-            <TodayList defaultCity="Bremen" />
-            <hr className="listStart"></hr>
-
-            <div className="weatherForecast" id="forecast"></div>
+            <WeatherInfo />
           </div>
         </div>
 
