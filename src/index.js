@@ -4,9 +4,6 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Form from "./Form";
-import Today from "./Today";
-import TodayList from "./TodayList";
-import WeatherInfo from "./WeatherInfo";
 
 document.body.style.backgroundColor = "#a6bdbd";
 
@@ -16,8 +13,7 @@ export default function App(props) {
       <div className="body">
         <div className="appWrapper">
           <div container className="app">
-            <Form />
-            <WeatherInfo />
+            <Form defaultCity="Bremen" />
           </div>
         </div>
 
