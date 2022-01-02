@@ -3,6 +3,7 @@ import "./Form.css";
 import axios from "axios";
 import TodayList from "./TodayList";
 import Today from "./Today";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Form(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,7 +19,7 @@ export default function Form(props) {
       name: response.data.name,
       day: "Monday",
       date: "01.01.2022",
-      iconURL: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconURL: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
   }
@@ -68,8 +69,7 @@ export default function Form(props) {
         <Today data={weatherData} />
         <TodayList data={weatherData} />
         <hr className="listStart"></hr>
-
-        <div className="weatherForecast" id="forecast"></div>
+        <WeatherForecast />
       </div>
     );
   } else {
