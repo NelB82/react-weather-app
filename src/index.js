@@ -21,7 +21,7 @@ export default function App(props) {
           <a
             href="https://github.com/NelB82/react-weather-app"
             className="codeLink m-2"
-            target="_blank"
+            target="/"
           >
             open source code
           </a>

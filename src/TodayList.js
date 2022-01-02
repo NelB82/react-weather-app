@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./TodayList.css";
 import WeatherTemperature from "./WeatherTemperature";
 
