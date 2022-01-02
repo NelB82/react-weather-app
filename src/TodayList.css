@@ -33,7 +33,7 @@ ul {
 }
 
 #celsius:hover {
-  opacity: 100%;
+  opacity: 60%;
   transition: 150ms ease-in-out;
   cursor: pointer;
   font-size: 20px;

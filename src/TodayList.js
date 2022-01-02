@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./TodayList.css";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function TodayList(props) {
   return (
@@ -19,16 +20,7 @@ export default function TodayList(props) {
             <div className="vertical"></div>
             <ul>
               <li>
-                <span id="today-temperature">
-                  {Math.round(props.data.temperature)}
-                </span>
-                <button href="#" id="celsius">
-                  °C
-                </button>
-                |
-                <button href="#" id="fahrenheit">
-                  °F
-                </button>
+                <WeatherTemperature celsius={props.data.temperature} />
               </li>
               <li>
                 <span id="todayHumidity">{props.data.humidity}</span>
