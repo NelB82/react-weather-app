@@ -17,8 +17,7 @@ export default function Form(props) {
       humidity: response.data.main.humidity,
       condition: response.data.weather[0].description,
       name: response.data.name,
-      day: "Monday",
-      date: "01.01.2022",
+      date: new Date(response.data.dt * 1000),
       iconURL: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
@@ -67,7 +66,7 @@ export default function Form(props) {
         </form>
         <span></span>
         <Today data={weatherData} />
-        <TodayList data={weatherData} />
+        <TodayList data={weatherData} date={weatherData.date} />
         <hr className="listStart"></hr>
         <WeatherForecast />
       </div>
