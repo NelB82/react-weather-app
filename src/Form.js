@@ -18,7 +18,7 @@ export default function Form(props) {
       name: response.data.name,
       day: "Monday",
       date: "01.01.2022",
-      iconURL: "http://openweathermap.org/img/wn/10d@2x.png",
+      iconURL: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
   }
