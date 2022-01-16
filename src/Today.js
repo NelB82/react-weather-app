@@ -11,6 +11,7 @@ export default function Today(props) {
     "Friday",
     "Saturday",
   ];
+  console.log(props.data);
   let day = days[props.data.date.getDay()];
   let hours = [props.data.date.getHours()];
   if (hours < 10) {
