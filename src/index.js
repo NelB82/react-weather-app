@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Form from "./Form";
@@ -11,7 +10,7 @@ export default function App(props) {
     <div className="App">
       <div className="body">
         <div className="appWrapper">
-          <div container className="app">
+          <div className="app">
             <Form defaultCity="Bremen" />
           </div>
         </div>
