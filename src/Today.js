@@ -14,10 +14,10 @@ export default function Today(props) {
   let day = days[props.data.date.getDay()];
   let hours = props.data.date.getHours();
   let minutes = props.data.date.getMinutes();
-
   if (hours < 10) {
     hours = `0${hours}`;
   }
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -29,6 +29,7 @@ export default function Today(props) {
             <h1 id="cityToday">{props.data.name}</h1>
             <h2 id="dayToday">{day}</h2>
             <h3 id="dateToday">
+            <h3 id="timeToday">
               {hours}:{minutes}
             </h3>
           </div>

@@ -20,7 +20,9 @@ export default function Form(props) {
       date: new Date(response.data.dt * 1000),
       iconURL: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      coords: response.data.coord,
     });
+    console.log(response.data);
   }
 
   function handleSubmit(event) {
@@ -68,7 +70,7 @@ export default function Form(props) {
         <Today data={weatherData} />
         <TodayList data={weatherData} date={weatherData.date} />
         <hr className="listStart"></hr>
-        <WeatherForecast />
+        <WeatherForecast data={weatherData} />
       </div>
     );
   } else {
