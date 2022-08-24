@@ -22,7 +22,6 @@ export default function Form(props) {
       description: response.data.weather[0].description,
       coords: response.data.coord,
     });
-    console.log(response);
   }
 
   function handleSubmit(event) {
