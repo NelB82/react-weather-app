@@ -15,6 +15,7 @@ export default function App(props) {
           </div>
         </div>
 
+        <br />
         <div className="sourceCode">
           <a
             href="https://github.com/NelB82/react-weather-app"
